@@ -3,7 +3,7 @@ import morgan from "morgan";
 import cors from "cors";
 import dotenv from "dotenv";
 
-import userRoutes from "./routes/users.js";
+import userRoutes from "./src/routes/users.js";
 
 dotenv.config();
 
@@ -18,7 +18,7 @@ app.use(morgan("dev"));
 app.use("/api/users", userRoutes);
 
 app.get("/", (req, res) => {
-    res.json({ message: "Bienvenue sur l'API 🚀" });
+    res.json({ message: "Bienvenue sur l'API" });
 });
 
 export default app;
